@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>당신의 소득, 언제까지 회사가 정하게 두시겠습니까? | 메가미래라이프 설계사 모집</title>
+  <meta name="description" content="정년 없음, 소득 상한 없음, 경력 무관. 전국 70개 지점, 928명의 설계사, 33개 제휴 보험사. AI 영업 지원 시스템까지. 10초 적합도 테스트로 확인해 보세요." />
+  <meta property="og:title" content="당신의 소득, 언제까지 회사가 정하게 두시겠습니까?" />
+  <meta property="og:description" content="전국 70개 지점, 928명의 설계사가 먼저 증명했습니다. 메가미래라이프 설계사 집중 모집. 10초 적합도 테스트" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0a1529" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+  <style>
+    :root {
+      --brand-blue: #1e40af;
+      --brand-blue-600: #2563eb;
+      --brand-blue-400: #60a5fa;
+      --brand-dark: #1e3a8a;
+      --brand-navy: #0f1e3d;
+      --brand-navy-deep: #0a1529;
+      --brand-gold: #f59e0b;
+      --brand-gold-light: #fbbf24;
+      --slate-50: #f8fafc;
+      --slate-100: #f1f5f9;
+      --slate-200: #e2e8f0;
+      --slate-400: #94a3b8;
+      --slate-500: #64748b;
+      --slate-600: #475569;
+      --slate-800: #1e293b;
+      --slate-900: #0f172a;
+      --shadow-card: 0 1px 2px rgba(15,23,42,.04), 0 4px 16px rgba(15,23,42,.06);
+      --shadow-card-hover: 0 8px 24px rgba(30,64,175,.1), 0 2px 8px rgba(15,23,42,.06);
+      --shadow-glow-gold: 0 8px 30px rgba(245,158,11,.4);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+      letter-spacing: -0.01em;
+      color: var(--slate-900);
+      -webkit-font-smoothing: antialiased;
+      background: #fff;
+      padding-bottom: 76px;
+    }
+    h1, h2, h3, h4 { letter-spacing: -0.03em; text-wrap: balance; word-break: keep-all; }
+    p { text-wrap: pretty; word-break: keep-all; }
+    a { text-decoration: none; color: inherit; }
+    button { font-family: inherit; cursor: pointer; border: none; }
+    .container { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+    .tabular { font-variant-numeric: tabular-nums; font-feature-settings: "tnum"; }
+
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1); }
+    .reveal.on { opacity: 1; transform: none; }
+    .reveal.d1 { transition-delay: .1s; } .reveal.d2 { transition-delay: .2s; }
+    .reveal.d3 { transition-delay: .3s; } .reveal.d4 { transition-delay: .4s; }
+
+    .eyebrow { display: inline-flex; align-items: center; gap: .5rem; font-size: .8125rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+
+    /* ---------- urgency strip ---------- */
+    .strip {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 55;
+      background: linear-gradient(90deg, #b45309, var(--brand-gold), #b45309);
+      color: #1c1102; text-align: center;
+      font-weight: 800; font-size: 13px; letter-spacing: -.01em;
+      padding: 9px 14px;
+    }
+    .strip b { text-decoration: underline; text-underline-offset: 2px; }
+
+    /* ---------- top bar ---------- */
+    .topbar {
+      position: fixed; top: 34px; left: 0; right: 0; z-index: 50;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 11px 20px;
+      background: rgba(7, 14, 28, .78);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255,255,255,.07);
+    }
+    .topbar .logo { display: flex; align-items: center; gap: 8px; color: #fff; font-weight: 800; font-size: 15px; }
+    .topbar .logo .mark { width: 28px; height: 28px; border-radius: 7px; display: grid; place-items: center; background: linear-gradient(135deg, var(--brand-blue), var(--brand-dark)); color: #fff; font-size: 15px; font-weight: 800; }
+    .topbar .call { display: inline-flex; align-items: center; gap: 6px; padding: 8px 15px; border-radius: 999px; background: var(--brand-gold); color: #1c1102; font-weight: 800; font-size: 13.5px; }
+
+    /* ---------- hero ---------- */
+    .hero {
+      position: relative; overflow: hidden;
+      min-height: 100svh;
+      display: flex; align-items: center;
+      background: var(--brand-navy-deep);
+      padding: 130px 0 70px;
+    }
+    .hero .bg {
+      position: absolute; inset: 0;
+      background-image: url("https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1200&q=60");
+      background-size: cover; background-position: center;
+      filter: saturate(.85);
+      animation: heroZoom 24s ease-in-out infinite alternate;
+    }
+    @keyframes heroZoom { from { transform: scale(1); } to { transform: scale(1.09); } }
+    .hero .veil {
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(115deg, rgba(7,14,28,.95) 0%, rgba(10,21,41,.82) 45%, rgba(10,21,41,.55) 100%),
+        radial-gradient(700px 500px at 90% 15%, rgba(245,158,11,.16), transparent 65%);
+    }
+    .hero .inner { position: relative; z-index: 2; text-align: left; max-width: 760px; }
+    @media (max-width: 640px) { .hero { padding-top: 118px; } }
+
+    .hero .hook-label {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 8px 16px; border-radius: 999px;
+      background: rgba(245,158,11,.12); border: 1px solid rgba(245,158,11,.35);
+      color: var(--brand-gold-light); font-weight: 800; font-size: 13.5px;
+      margin-bottom: 24px;
+    }
+    .dot { position: relative; width: 8px; height: 8px; flex-shrink: 0; }
+    .dot::before { content:""; position:absolute; inset:0; border-radius:999px; background: var(--brand-gold); }
+    .dot::after { content:""; position:absolute; inset:0; border-radius:999px; background: var(--brand-gold); animation: ping 1.6s cubic-bezier(0,0,.2,1) infinite; }
+    @keyframes ping { 75%, 100% { transform: scale(2.4); opacity: 0; } }
+
+    .hero h1 {
+      color: #fff; font-weight: 900;
+      font-size: clamp(2.05rem, 8vw, 4.6rem);
+      line-height: 1.18; margin-bottom: 10px;
+      text-shadow: 0 2px 30px rgba(2,8,23,.6);
+    }
+    .hero h1 .dim { color: rgba(255,255,255,.55); font-weight: 700; font-size: .62em; display: block; margin-bottom: 12px; letter-spacing: -.02em; }
+    .hero h1 .grad {
+      background: linear-gradient(92deg, #fff 10%, var(--brand-gold-light) 55%, var(--brand-gold) 100%);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .hero .sub {
+      color: #cbd5e1; font-size: clamp(1.02rem, 2.8vw, 1.28rem); line-height: 1.75;
+      margin: 22px 0 14px; max-width: 560px;
+    }
+    .hero .sub b { color: #fff; }
+    .hero-keywords { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 30px; }
+    .kw {
+      padding: 7px 14px; border-radius: 999px;
+      background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.14);
+      color: #e2e8f0; font-weight: 700; font-size: 13px;
+    }
+    .kw b { color: var(--brand-gold-light); }
+    .kw-hot { background: rgba(245,158,11,.16); border-color: rgba(245,158,11,.5); color: #fff; }
+
+    .cta-row { display: flex; flex-direction: column; gap: 12px; max-width: 420px; }
+    @media (min-width: 720px) { .cta-row { flex-direction: row; max-width: none; } }
+    .btn-gold {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 18px 32px; border-radius: 14px;
+      background: linear-gradient(180deg, var(--brand-gold-light), var(--brand-gold));
+      color: #1c1102;
+      font-weight: 900; font-size: 17.5px;
+      box-shadow: var(--shadow-glow-gold);
+      transition: transform .2s, filter .2s;
+      animation: heartbeat 2.4s ease-in-out infinite;
+    }
+    @keyframes heartbeat { 0%, 100% { transform: scale(1); } 6% { transform: scale(1.03); } 12% { transform: scale(1); } 18% { transform: scale(1.03); } 24% { transform: scale(1); } }
+    .btn-gold:hover { filter: brightness(1.06); transform: translateY(-2px); animation: none; }
+    .btn-ghost {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 18px 32px; border-radius: 14px;
+      background: rgba(255,255,255,.09); border: 1.5px solid rgba(255,255,255,.25);
+      backdrop-filter: blur(8px);
+      color: #fff; font-weight: 800; font-size: 16.5px;
+      transition: background .2s;
+    }
+    .btn-ghost:hover { background: rgba(255,255,255,.17); }
+
+    .countdown {
+      margin-top: 34px;
+      display: inline-flex; flex-wrap: wrap; align-items: center; gap: 12px 16px;
+      padding: 13px 20px; border-radius: 14px;
+      background: rgba(2,8,23,.55); border: 1px solid rgba(255,255,255,.12);
+      color: #e2e8f0; font-size: 13.5px; font-weight: 700;
+    }
+    .countdown .time { display: inline-flex; gap: 5px; }
+    .countdown .cell { min-width: 42px; padding: 5px 7px; border-radius: 8px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1); color: var(--brand-gold-light); font-weight: 800; font-size: 17px; text-align: center; }
+    .countdown .cell small { display: block; color: var(--slate-400); font-size: 10px; font-weight: 600; margin-top: 1px; }
+
+    .hero-stats { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 14px 34px; }
+    .hero-stats .val { color: #fff; font-weight: 800; font-size: clamp(1.3rem, 3.2vw, 1.7rem); }
+    .hero-stats .lab { color: var(--slate-400); font-size: 12.5px; margin-top: 1px; }
+    .trust-note { margin-top: 22px; display: inline-flex; align-items: center; gap: 6px; color: var(--slate-400); font-size: 12.5px; }
+    .trust-note svg { color: var(--brand-gold); flex-shrink: 0; }
+
+    /* ---------- social proof toast ---------- */
+    .toast {
+      position: fixed; left: 14px; bottom: 90px; z-index: 58;
+      display: flex; align-items: center; gap: 11px;
+      padding: 12px 16px; border-radius: 14px;
+      background: rgba(10,21,41,.92); border: 1px solid rgba(255,255,255,.14);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 10px 32px rgba(2,8,23,.45);
+      color: #fff; font-size: 13px;
+      transform: translateX(-120%); opacity: 0;
+      transition: transform .6s cubic-bezier(.16,1,.3,1), opacity .6s;
+      max-width: 290px;
+    }
+    .toast.show { transform: none; opacity: 1; }
+    .toast .t-ico { width: 36px; height: 36px; border-radius: 999px; display: grid; place-items: center; background: rgba(245,158,11,.16); color: var(--brand-gold); flex-shrink: 0; }
+    .toast .t-name { font-weight: 800; }
+    .toast .t-sub { color: var(--slate-400); font-size: 11.5px; margin-top: 1px; }
+    @media (min-width: 860px) { .toast { bottom: 24px; } }
+
+    /* ---------- section base ---------- */
+    section { padding: 88px 0; }
+    .sec-head { text-align: center; max-width: 680px; margin: 0 auto 50px; }
+    .sec-head h2 { font-size: clamp(1.7rem, 5.2vw, 2.7rem); font-weight: 900; line-height: 1.28; }
+    .sec-head .desc { color: var(--slate-500); font-size: clamp(.95rem, 2.4vw, 1.1rem); margin-top: 14px; line-height: 1.7; }
+
+    /* ---------- pain ---------- */
+    .pain { background: var(--slate-50); }
+    .pain-list { max-width: 620px; margin: 0 auto; display: grid; gap: 13px; }
+    .pain-item {
+      display: flex; align-items: flex-start; gap: 14px;
+      background: #fff; border: 1px solid var(--slate-200); border-radius: 16px;
+      padding: 19px 22px; box-shadow: var(--shadow-card);
+      font-size: clamp(1rem, 2.7vw, 1.13rem); font-weight: 700; color: var(--slate-800); line-height: 1.55;
+    }
+    .pain-item .chk { flex-shrink: 0; width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; background: rgba(30,64,175,.08); color: var(--brand-blue); font-size: 14px; }
+    .pain-punch { margin-top: 38px; text-align: center; font-size: clamp(1.2rem, 3.6vw, 1.7rem); font-weight: 900; line-height: 1.5; }
+    .pain-punch .blue { color: var(--brand-blue); }
+
+    /* ---------- compare table ---------- */
+    .compare { background: #fff; }
+    .cmp-wrap { max-width: 760px; margin: 0 auto; border-radius: 22px; overflow: hidden; border: 1px solid var(--slate-200); box-shadow: var(--shadow-card); }
+    .cmp-row { display: grid; grid-template-columns: 1fr 1.1fr 1.1fr; }
+    .cmp-row > div { padding: 16px 12px; font-size: clamp(.82rem, 2.4vw, 1rem); display: flex; align-items: center; justify-content: center; text-align: center; line-height: 1.45; }
+    .cmp-row .c-label { background: var(--slate-50); font-weight: 800; color: var(--slate-600); justify-content: flex-start; text-align: left; padding-left: 18px; }
+    .cmp-row .c-old { color: var(--slate-500); background: #fff; }
+    .cmp-row .c-new { background: linear-gradient(180deg, rgba(30,64,175,.05), rgba(30,64,175,.02)); color: var(--brand-dark); font-weight: 800; }
+    .cmp-head > div { padding: 18px 12px; font-weight: 900; font-size: clamp(.9rem, 2.6vw, 1.05rem); }
+    .cmp-head .c-old { color: var(--slate-500); background: var(--slate-100); }
+    .cmp-head .c-new { background: var(--brand-navy); color: var(--brand-gold-light); }
+    .cmp-row + .cmp-row { border-top: 1px solid var(--slate-100); }
+    .cmp-foot { text-align: center; margin-top: 26px; font-weight: 800; font-size: clamp(1.05rem, 3vw, 1.3rem); }
+    .cmp-foot .blue { color: var(--brand-blue); }
+
+    /* ---------- simulator ---------- */
+    .sim { background: var(--brand-navy); color: #fff; position: relative; overflow: hidden; }
+    .sim::before {
+      content:""; position:absolute; inset:0;
+      background:
+        radial-gradient(600px 460px at 92% 8%, rgba(245,158,11,.14), transparent 65%),
+        radial-gradient(560px 440px at 4% 92%, rgba(37,99,235,.2), transparent 65%),
+        radial-gradient(rgba(255,255,255,.05) 1px, transparent 1px);
+      background-size: auto, auto, 22px 22px;
+    }
+    .sim .container { position: relative; z-index: 1; }
+    .sim .sec-head .desc { color: var(--slate-400); }
+    .sim-card {
+      max-width: 640px; margin: 0 auto;
+      background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14);
+      backdrop-filter: blur(10px);
+      border-radius: 24px; padding: 34px 26px;
+    }
+    @media (min-width: 640px) { .sim-card { padding: 42px 44px; } }
+    .sim-q { text-align: center; font-size: clamp(1.05rem, 3vw, 1.25rem); font-weight: 800; margin-bottom: 26px; }
+    .sim-slider { width: 100%; margin: 18px 0 6px; -webkit-appearance: none; appearance: none; height: 10px; border-radius: 999px; background: rgba(255,255,255,.15); outline: none; }
+    .sim-slider::-webkit-slider-thumb {
+      -webkit-appearance: none; appearance: none;
+      width: 30px; height: 30px; border-radius: 999px;
+      background: var(--brand-gold); border: 4px solid #fff;
+      box-shadow: 0 4px 14px rgba(245,158,11,.5); cursor: pointer;
+    }
+    .sim-slider::-moz-range-thumb { width: 26px; height: 26px; border-radius: 999px; background: var(--brand-gold); border: 4px solid #fff; box-shadow: 0 4px 14px rgba(245,158,11,.5); cursor: pointer; }
+    .sim-scale { display: flex; justify-content: space-between; color: var(--slate-400); font-size: 12px; font-weight: 600; margin-bottom: 28px; }
+    .sim-result { text-align: center; padding: 26px 20px; border-radius: 18px; background: rgba(2,8,23,.45); border: 1px solid rgba(245,158,11,.3); }
+    .sim-result .r-label { color: var(--slate-400); font-size: 13.5px; font-weight: 700; margin-bottom: 8px; }
+    .sim-result .r-value { font-size: clamp(2.3rem, 9vw, 3.6rem); font-weight: 900; color: var(--brand-gold-light); line-height: 1.1; }
+    .sim-result .r-value small { font-size: .4em; font-weight: 800; color: #fff; }
+    .sim-vs { margin-top: 14px; color: var(--slate-400); font-size: 13px; font-weight: 600; }
+    .sim-vs b { color: #fff; }
+    .sim-bar-wrap { margin-top: 16px; display: grid; gap: 9px; }
+    .sim-bar-row { display: grid; grid-template-columns: 92px 1fr; align-items: center; gap: 10px; font-size: 12px; color: var(--slate-400); font-weight: 700; text-align: left; }
+    .sim-bar { height: 22px; border-radius: 7px; position: relative; overflow: hidden; background: rgba(255,255,255,.06); }
+    .sim-bar i { position: absolute; inset: 0 auto 0 0; border-radius: 7px; transition: width .6s cubic-bezier(.16,1,.3,1); }
+    .sim-bar .b-me { background: linear-gradient(90deg, var(--brand-gold), var(--brand-gold-light)); }
+    .sim-bar .b-avg { background: rgba(148,163,184,.5); }
+    .sim-disclaimer { margin-top: 20px; color: var(--slate-500); font-size: 11.5px; line-height: 1.6; text-align: center; }
+    .sim-cta { margin-top: 26px; text-align: center; }
+
+    /* ---------- benefits ---------- */
+    .benefits { background: #fff; }
+    .benefit-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    @media (min-width: 640px) { .benefit-grid { grid-template-columns: 1fr 1fr; } }
+    .benefit-card {
+      display: flex; gap: 18px; align-items: flex-start;
+      padding: 26px 24px; border-radius: 20px;
+      background: var(--slate-50); border: 1px solid var(--slate-200);
+      transition: transform .3s, box-shadow .3s, border-color .3s;
+    }
+    .benefit-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-card-hover); border-color: rgba(30,64,175,.25); }
+    .benefit-card .ico { flex-shrink: 0; width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center; background: var(--brand-navy); color: var(--brand-gold); }
+    .benefit-card h3 { font-size: 1.15rem; font-weight: 900; margin-bottom: 6px; }
+    .benefit-card h3 .hl { color: var(--brand-blue); }
+    .benefit-card p { color: var(--slate-500); font-size: .93rem; line-height: 1.65; }
+
+    /* ---------- AI section ---------- */
+    .ai { background: linear-gradient(180deg, var(--slate-50), #fff); position: relative; overflow: hidden; }
+    .ai::before {
+      content:""; position:absolute; inset:0;
+      background: radial-gradient(rgba(30,64,175,.06) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+    .ai .container { position: relative; z-index: 1; }
+    .ai-badge {
+      display: inline-flex; align-items: center; gap: 7px;
+      padding: 8px 16px; border-radius: 999px;
+      background: var(--brand-navy); color: var(--brand-gold-light);
+      font-weight: 800; font-size: 13px; margin-bottom: 16px;
+    }
+    .ai-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    @media (min-width: 860px) { .ai-grid { grid-template-columns: repeat(3, 1fr); } }
+    .ai-card {
+      position: relative; padding: 30px 26px; border-radius: 20px;
+      background: #fff; border: 1px solid var(--slate-200);
+      box-shadow: var(--shadow-card);
+      transition: transform .3s, box-shadow .3s, border-color .3s;
+      overflow: hidden;
+    }
+    .ai-card::before {
+      content:""; position:absolute; top:0; left:0; right:0; height:4px;
+      background: linear-gradient(90deg, var(--brand-blue), var(--brand-blue-400), var(--brand-gold));
+    }
+    .ai-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-card-hover); border-color: rgba(30,64,175,.3); }
+    .ai-card .ico { width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center; background: linear-gradient(135deg, var(--brand-blue), var(--brand-dark)); color: #fff; margin-bottom: 18px; }
+    .ai-card h3 { font-size: 1.13rem; font-weight: 900; margin-bottom: 8px; }
+    .ai-card p { color: var(--slate-500); font-size: .92rem; line-height: 1.7; }
+    .ai-strip {
+      margin-top: 26px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px 26px;
+      padding: 20px 24px; border-radius: 18px;
+      background: var(--brand-navy); color: #fff;
+      font-weight: 800; font-size: clamp(.92rem, 2.6vw, 1.05rem); text-align: center;
+    }
+    .ai-strip .gold { color: var(--brand-gold-light); }
+    .ai-strip .sep { width: 1px; height: 18px; background: rgba(255,255,255,.2); }
+    @media (max-width: 640px) { .ai-strip .sep { display: none; } }
+
+    /* ---------- network map ---------- */
+    .network { background: var(--brand-navy); color: #fff; position: relative; overflow: hidden; }
+    .network::before {
+      content:""; position:absolute; inset:0;
+      background:
+        radial-gradient(600px 460px at 8% 10%, rgba(37,99,235,.18), transparent 65%),
+        radial-gradient(520px 420px at 95% 90%, rgba(245,158,11,.1), transparent 65%),
+        radial-gradient(rgba(255,255,255,.05) 1px, transparent 1px);
+      background-size: auto, auto, 22px 22px;
+    }
+    .network .container { position: relative; z-index: 1; }
+    .network .sec-head .desc { color: var(--slate-400); }
+    .net-wrap { display: grid; grid-template-columns: 1fr; gap: 28px; align-items: center; }
+    @media (min-width: 900px) { .net-wrap { grid-template-columns: 1.05fr 1fr; gap: 44px; } }
+    .net-map { max-width: 420px; margin: 0 auto; width: 100%; }
+    .net-map svg { width: 100%; height: auto; display: block; }
+    .land { fill: rgba(255,255,255,.055); stroke: rgba(255,255,255,.22); stroke-width: 1.4; }
+    .city { cursor: pointer; }
+    .city .c-dot { fill: var(--brand-gold); transition: all .35s; filter: drop-shadow(0 0 6px rgba(245,158,11,.55)); transform-box: fill-box; transform-origin: center; }
+    .city .c-ring { fill: none; stroke: var(--brand-gold); stroke-width: 1.6; opacity: 0; transform-box: fill-box; transform-origin: center; }
+    .city.active .c-dot { fill: var(--brand-gold-light); transform: scale(1.35); filter: drop-shadow(0 0 14px rgba(251,191,36,.9)); }
+    .city.active .c-ring { animation: mapring 1.6s cubic-bezier(0,0,.2,1) infinite; }
+    @keyframes mapring { 0% { transform: scale(1); opacity: .85; } 100% { transform: scale(2.6); opacity: 0; } }
+    .city text { fill: #cbd5e1; font-size: 12px; font-weight: 700; font-family: inherit; transition: fill .3s; }
+    .city.active text { fill: #fff; font-weight: 800; }
+    .city .c-cnt { fill: var(--brand-gold-light); font-size: 10.5px; font-weight: 800; }
+    .net-side { }
+    .net-totals { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+    .net-total {
+      padding: 20px 18px; border-radius: 16px; text-align: center;
+      background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14);
+    }
+    .net-total .v { font-size: clamp(1.9rem, 5vw, 2.5rem); font-weight: 900; color: var(--brand-gold-light); }
+    .net-total .l { color: var(--slate-400); font-size: 13px; font-weight: 700; margin-top: 3px; }
+    .net-list { display: grid; gap: 7px; }
+    .net-row {
+      display: grid; grid-template-columns: 64px 1fr auto; align-items: center; gap: 12px;
+      width: 100%; padding: 11px 15px; border-radius: 12px; text-align: left;
+      background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.09);
+      color: #e2e8f0; font-size: 13.5px; font-weight: 700;
+      transition: all .3s;
+    }
+    .net-row.active { background: rgba(245,158,11,.13); border-color: rgba(245,158,11,.45); color: #fff; }
+    .net-row .r-bar { height: 8px; border-radius: 999px; background: rgba(255,255,255,.09); overflow: hidden; position: relative; }
+    .net-row .r-bar i { position: absolute; inset: 0 auto 0 0; border-radius: 999px; background: linear-gradient(90deg, var(--brand-gold), var(--brand-gold-light)); width: 0; transition: width 1s cubic-bezier(.16,1,.3,1); }
+    .net-row .r-cnt { color: var(--slate-400); font-size: 12px; font-weight: 700; white-space: nowrap; }
+    .net-row.active .r-cnt { color: var(--brand-gold-light); }
+    .net-note { margin-top: 16px; color: var(--slate-500); font-size: 11.5px; text-align: center; }
+
+    /* ---------- stories ---------- */
+    .stories { background: #fff; }
+    .story-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
+    @media (min-width: 860px) { .story-grid { grid-template-columns: repeat(3, 1fr); } }
+    .story-card {
+      background: #fff; border: 1px solid var(--slate-200); border-radius: 22px;
+      box-shadow: var(--shadow-card); overflow: hidden;
+      display: flex; flex-direction: column;
+      transition: transform .3s, box-shadow .3s;
+    }
+    .story-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-card-hover); }
+    .story-metric { padding: 22px 26px 18px; background: var(--brand-navy); color: #fff; }
+    .story-metric .m-big { font-size: clamp(1.4rem, 4vw, 1.7rem); font-weight: 900; color: var(--brand-gold-light); line-height: 1.3; }
+    .story-metric .m-sub { color: var(--slate-400); font-size: 12.5px; font-weight: 700; margin-top: 4px; }
+    .story-body { padding: 22px 26px 24px; display: flex; flex-direction: column; gap: 16px; flex: 1; }
+    .story-card .quote { font-size: .98rem; font-weight: 600; line-height: 1.75; color: var(--slate-600); flex: 1; }
+    .story-card .who { display: flex; align-items: center; gap: 12px; padding-top: 16px; border-top: 1px solid var(--slate-100); }
+    .story-card .avatar { width: 42px; height: 42px; border-radius: 999px; display: grid; place-items: center; background: linear-gradient(135deg, var(--brand-blue), var(--brand-dark)); color: #fff; font-weight: 800; font-size: 14px; }
+    .story-card .name { font-weight: 800; font-size: .92rem; }
+    .story-card .role { color: var(--slate-500); font-size: .78rem; margin-top: 2px; }
+    .story-disclaimer { text-align: center; color: var(--slate-400); font-size: .74rem; margin-top: 22px; }
+
+    /* ---------- quiz ---------- */
+    .quiz { background: var(--brand-navy-deep); color: #fff; position: relative; overflow: hidden; }
+    .quiz::before {
+      content:""; position:absolute; inset:0;
+      background:
+        radial-gradient(600px 440px at 8% 10%, rgba(37,99,235,.2), transparent 65%),
+        radial-gradient(520px 420px at 95% 90%, rgba(245,158,11,.12), transparent 65%),
+        radial-gradient(rgba(255,255,255,.05) 1px, transparent 1px);
+      background-size: auto, auto, 22px 22px;
+    }
+    .quiz .container { position: relative; z-index: 1; }
+    .quiz .sec-head .desc { color: var(--slate-400); }
+    .quiz-card {
+      max-width: 560px; margin: 0 auto;
+      background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14);
+      backdrop-filter: blur(10px);
+      border-radius: 24px; padding: 34px 26px; text-align: center;
+      min-height: 320px; display: flex; flex-direction: column; justify-content: center;
+    }
+    @media (min-width: 640px) { .quiz-card { padding: 42px 44px; } }
+    .quiz-progress { display: flex; gap: 6px; justify-content: center; margin-bottom: 26px; }
+    .quiz-progress i { width: 34px; height: 5px; border-radius: 999px; background: rgba(255,255,255,.15); transition: background .3s; }
+    .quiz-progress i.on { background: var(--brand-gold); }
+    .quiz-q { font-size: clamp(1.15rem, 3.4vw, 1.45rem); font-weight: 900; line-height: 1.45; margin-bottom: 26px; }
+    .quiz-opts { display: grid; gap: 11px; }
+    .quiz-opt {
+      padding: 16px 20px; border-radius: 14px;
+      background: rgba(2,8,23,.4); border: 1.5px solid rgba(255,255,255,.16);
+      color: #fff; font-weight: 700; font-size: 15.5px; text-align: center;
+      transition: all .2s;
+    }
+    .quiz-opt:hover { border-color: var(--brand-gold); background: rgba(245,158,11,.12); transform: translateY(-1px); }
+    .quiz-result-pct { font-size: clamp(3rem, 12vw, 4.6rem); font-weight: 900; color: var(--brand-gold-light); line-height: 1; margin: 8px 0 4px; }
+    .quiz-result-title { font-size: clamp(1.15rem, 3.4vw, 1.4rem); font-weight: 900; margin-bottom: 12px; }
+    .quiz-result-desc { color: var(--slate-400); font-size: .95rem; line-height: 1.7; margin-bottom: 24px; }
+    .quiz-result-desc b { color: #fff; }
+    .quiz-note { margin-top: 14px; color: var(--slate-500); font-size: 11px; }
+
+    /* ---------- process ---------- */
+    .process { background: #fff; }
+    .process-grid { display: grid; grid-template-columns: 1fr; gap: 14px; max-width: 720px; margin: 0 auto; }
+    @media (min-width: 860px) { .process-grid { grid-template-columns: repeat(4, 1fr); max-width: none; } }
+    .process-step { padding: 26px 22px; border-radius: 18px; background: var(--slate-50); border: 1px solid var(--slate-200); }
+    .process-step .stepno { display: inline-grid; place-items: center; width: 38px; height: 38px; border-radius: 11px; background: var(--brand-blue); color: #fff; font-weight: 800; font-size: 16px; margin-bottom: 14px; }
+    .process-step h3 { font-size: 1.05rem; font-weight: 900; margin-bottom: 6px; }
+    .process-step p { color: var(--slate-500); font-size: .88rem; line-height: 1.6; }
+    .process-note { margin-top: 30px; text-align: center; font-weight: 800; color: var(--brand-blue); font-size: clamp(.95rem, 2.6vw, 1.1rem); }
+
+    /* ---------- faq ---------- */
+    .faq { background: var(--slate-50); }
+    .faq-list { max-width: 720px; margin: 0 auto; display: grid; gap: 12px; }
+    .faq-item { background: #fff; border: 1px solid var(--slate-200); border-radius: 16px; overflow: hidden; }
+    .faq-q { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 20px 22px; background: none; text-align: left; font-size: 1rem; font-weight: 800; color: var(--slate-900); line-height: 1.5; }
+    .faq-q .q-mark { color: var(--brand-blue); font-weight: 900; margin-right: 6px; }
+    .faq-q .chev { flex-shrink: 0; transition: transform .3s; color: var(--slate-400); }
+    .faq-item.open .chev { transform: rotate(180deg); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height .4s cubic-bezier(.16,1,.3,1); }
+    .faq-a-inner { padding: 0 22px 20px; color: var(--slate-600); font-size: .95rem; line-height: 1.75; }
+
+    /* ---------- form ---------- */
+    .apply { background: var(--brand-navy-deep); color: #fff; position: relative; overflow: hidden; }
+    .apply::before {
+      content:""; position:absolute; inset:0;
+      background:
+        radial-gradient(600px 460px at 90% 8%, rgba(245,158,11,.15), transparent 65%),
+        radial-gradient(560px 440px at 5% 95%, rgba(37,99,235,.2), transparent 65%),
+        radial-gradient(rgba(255,255,255,.05) 1px, transparent 1px);
+      background-size: auto, auto, 22px 22px;
+    }
+    .apply .container { position: relative; z-index: 1; }
+    .apply .sec-head .desc { color: var(--slate-400); }
+    .slots-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 9px 18px; border-radius: 999px;
+      background: rgba(239,68,68,.14); border: 1px solid rgba(239,68,68,.4);
+      color: #fca5a5; font-weight: 800; font-size: 13.5px;
+      margin-bottom: 18px;
+    }
+    .support-banner {
+      margin: 18px auto 0; max-width: 560px;
+      padding: 14px 20px; border-radius: 14px;
+      background: rgba(245,158,11,.13); border: 1px solid rgba(245,158,11,.45);
+      color: #fde68a; font-weight: 700; font-size: clamp(.9rem, 2.6vw, 1.02rem);
+    }
+    .support-banner b { color: var(--brand-gold-light); font-weight: 900; }
+    .form-card {
+      max-width: 560px; margin: 0 auto;
+      background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14);
+      backdrop-filter: blur(10px);
+      border-radius: 24px; padding: 32px 26px;
+    }
+    @media (min-width: 640px) { .form-card { padding: 40px 38px; } }
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-size: .88rem; font-weight: 800; color: #e2e8f0; margin-bottom: 8px; }
+    .form-group label .req { color: var(--brand-gold); }
+    .form-group input[type="text"], .form-group input[type="tel"], .form-group textarea, .form-group select {
+      width: 100%; padding: 14px 16px; border-radius: 12px;
+      background: rgba(2,8,23,.45); border: 1px solid rgba(255,255,255,.15);
+      color: #fff; font-size: 16px; font-family: inherit;
+      transition: border-color .2s, box-shadow .2s; appearance: none;
+    }
+    .form-group select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%2394a3b8' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 6l3.5 4 3.5-4z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; }
+    .form-group select option { color: var(--slate-900); background: #fff; }
+    .form-group input::placeholder, .form-group textarea::placeholder { color: var(--slate-500); }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: var(--brand-gold); box-shadow: 0 0 0 3px rgba(245,158,11,.18); }
+    .radio-row { display: flex; gap: 10px; flex-wrap: wrap; }
+    .radio-pill { position: relative; }
+    .radio-pill input { position: absolute; opacity: 0; inset: 0; cursor: pointer; }
+    .radio-pill span { display: inline-block; padding: 11px 20px; border-radius: 999px; background: rgba(2,8,23,.45); border: 1px solid rgba(255,255,255,.15); color: var(--slate-400); font-weight: 700; font-size: .9rem; transition: all .2s; cursor: pointer; }
+    .radio-pill input:checked + span { background: var(--brand-gold); border-color: var(--brand-gold); color: #1c1102; }
+    .consent { display: flex; align-items: flex-start; gap: 10px; margin: 22px 0; }
+    .consent input { width: 18px; height: 18px; margin-top: 2px; accent-color: var(--brand-gold); cursor: pointer; flex-shrink: 0; }
+    .consent label { font-size: .8rem; color: var(--slate-400); line-height: 1.6; cursor: pointer; }
+    .consent label b { color: #e2e8f0; }
+    .btn-submit {
+      width: 100%; padding: 19px; border-radius: 14px;
+      background: linear-gradient(180deg, var(--brand-gold-light), var(--brand-gold));
+      color: #1c1102; font-weight: 900; font-size: 18px;
+      box-shadow: var(--shadow-glow-gold);
+      transition: transform .2s, filter .2s;
+    }
+    .btn-submit:hover { filter: brightness(1.06); transform: translateY(-2px); }
+    .btn-submit:disabled { opacity: .6; cursor: not-allowed; transform: none; }
+    .form-success { display: none; text-align: center; padding: 40px 10px; }
+    .form-success.show { display: block; }
+    .form-success .big-check { width: 72px; height: 72px; border-radius: 999px; margin: 0 auto 22px; display: grid; place-items: center; background: rgba(245,158,11,.15); color: var(--brand-gold); }
+    .form-success h3 { font-size: 1.4rem; font-weight: 900; margin-bottom: 10px; }
+    .form-success p { color: var(--slate-400); line-height: 1.7; }
+    .form-alt { margin-top: 20px; text-align: center; color: var(--slate-400); font-size: .85rem; }
+    .form-alt a { color: var(--brand-gold-light); font-weight: 800; }
+
+    /* ---------- footer ---------- */
+    footer { background: #060d1a; color: var(--slate-500); padding: 40px 0 30px; font-size: .78rem; line-height: 1.8; }
+    footer .fbrand { display: flex; align-items: center; gap: 8px; color: #fff; font-weight: 800; font-size: .95rem; margin-bottom: 14px; }
+    footer .fbrand .mark { width: 26px; height: 26px; border-radius: 6px; display: grid; place-items: center; background: linear-gradient(135deg, var(--brand-blue), var(--brand-dark)); color: #fff; font-size: 13px; }
+    footer .copy { margin-top: 14px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,.07); }
+
+    /* ---------- sticky CTA ---------- */
+    .sticky-cta {
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 60;
+      display: flex; gap: 8px; padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+      background: rgba(7,14,28,.94);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-top: 1px solid rgba(255,255,255,.1);
+    }
+    .sticky-cta a, .sticky-cta button {
+      flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+      padding: 14px 8px; border-radius: 12px; font-weight: 800; font-size: 14.5px;
+      transition: transform .15s;
+    }
+    .sticky-cta a:active, .sticky-cta button:active { transform: scale(.97); }
+    .sticky-cta .s-call { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18); color: #fff; }
+    .sticky-cta .s-kakao { background: #fee500; color: #191919; }
+    .sticky-cta .s-apply { background: linear-gradient(180deg, var(--brand-gold-light), var(--brand-gold)); color: #1c1102; flex: 1.3; box-shadow: 0 4px 18px rgba(245,158,11,.4); font-weight: 900; }
+    @media (min-width: 860px) {
+      body { padding-bottom: 0; }
+      .sticky-cta { left: auto; right: 28px; bottom: 28px; border-radius: 18px; border: 1px solid rgba(255,255,255,.12); padding: 10px; box-shadow: 0 12px 40px rgba(2,8,23,.4); }
+      .sticky-cta a, .sticky-cta button { padding: 13px 20px; flex: none; }
+    }
+
+    /* ---------- mobile optimization ---------- */
+    @media (max-width: 640px) {
+      section { padding: 60px 0; }
+      .sec-head { margin-bottom: 36px; }
+      .strip { font-size: 11.5px; padding: 8px 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+      .topbar { top: 31px; padding: 9px 14px; }
+      .topbar .logo { font-size: 14px; }
+      .topbar .call { padding: 7px 12px; font-size: 12.5px; }
+      .hero { padding-bottom: 56px; }
+      .hero .bg { animation: none; } /* 모바일 배터리·성능 절약 */
+      .hero .hook-label { font-size: 12.5px; padding: 7px 13px; margin-bottom: 18px; }
+      .hero .sub { margin: 16px 0 12px; }
+      .hero-keywords { gap: 6px; margin-bottom: 24px; }
+      .kw { padding: 6px 11px; font-size: 12px; }
+      .btn-gold, .btn-ghost { padding: 16px 24px; font-size: 16px; width: 100%; }
+      .countdown { margin-top: 26px; padding: 11px 14px; font-size: 12.5px; gap: 8px 12px; width: 100%; justify-content: center; }
+      .countdown .cell { min-width: 38px; font-size: 15px; }
+      .hero-stats { gap: 12px 22px; margin-top: 24px; }
+      .toast { max-width: 240px; font-size: 12px; padding: 10px 13px; bottom: 84px; }
+      .toast .t-ico { width: 30px; height: 30px; }
+      .pain-item { padding: 16px 17px; gap: 11px; }
+      .cmp-row > div { padding: 13px 8px; }
+      .cmp-row .c-label { padding-left: 13px; }
+      .sim-card, .quiz-card, .form-card { padding: 28px 20px; }
+      .sim-result { padding: 22px 14px; }
+      .sim-bar-row { grid-template-columns: 76px 1fr; }
+      .benefit-card { padding: 22px 18px; gap: 14px; }
+      .benefit-card .ico { width: 46px; height: 46px; }
+      .ai-card { padding: 24px 20px; }
+      .ai-strip { padding: 16px 18px; flex-direction: column; gap: 8px; }
+      .net-map { max-width: 330px; }
+      .net-totals { gap: 10px; }
+      .net-total { padding: 16px 12px; }
+      .net-row { padding: 10px 12px; gap: 9px; grid-template-columns: 52px 1fr auto; font-size: 12.5px; }
+      .net-row .r-cnt { font-size: 11px; }
+      .story-metric { padding: 18px 20px 15px; }
+      .story-body { padding: 18px 20px 20px; }
+      .process-step { padding: 21px 19px; }
+      .faq-q { padding: 17px 17px; font-size: .93rem; }
+      .faq-a-inner { padding: 0 17px 17px; font-size: .9rem; }
+      .quiz-opt { padding: 15px 16px; font-size: 14.5px; }
+      .support-banner { padding: 12px 16px; }
+      footer { padding-bottom: 26px; }
+    }
+    @media (max-width: 380px) {
+      .hero h1 { font-size: 1.85rem; }
+      .countdown .time { width: 100%; justify-content: center; }
+      .sticky-cta a, .sticky-cta button { font-size: 13px; padding: 13px 4px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, ::before, ::after { animation-duration: .001ms !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Urgency strip ===== -->
+  <div class="strip">⚡ <span id="strip-month"></span> 기수 모집 · 무경력 신입 <b>최대 1천만원 지원</b> · 잔여 상담 <b id="strip-slots">6</b>자리</div>
+
+  <!-- ===== Top bar ===== -->
+  <header class="topbar">
+    <div class="logo"><span class="mark">M</span>메가미래라이프</div>
+    <a class="call" href="tel:01076019436">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      010-7601-9436
+    </a>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="bg" aria-hidden="true"></div>
+    <div class="veil" aria-hidden="true"></div>
+    <div class="container">
+      <div class="inner">
+        <div class="hook-label"><span class="dot"></span>광고 보고 오셨나요? 딱 3분만 투자해 보세요</div>
+
+        <h1>
+          <span class="dim">월급 빼고 다 오르는 시대,</span>
+          당신의 소득,<br />
+          언제까지 <span class="grad">회사가 정하게</span><br />
+          두시겠습니까?
+        </h1>
+
+        <p class="sub">
+          정년 없이, 상한 없이, 한 만큼 버는 일.<br />
+          <b>전국 70개 지점, 928명의 설계사</b>가 먼저 증명했습니다.
+        </p>
+
+        <div class="hero-keywords">
+          <span class="kw kw-hot">💰 무경력 신입 <b>최대 1천만원 지원</b></span>
+          <span class="kw">✅ 경력·나이·전공 <b>무관</b></span>
+          <span class="kw">✅ 검증된 <b>DB 지원</b></span>
+          <span class="kw">✅ <b>AI 영업 지원</b> 시스템</span>
+          <span class="kw">✅ 매일 <b>원수사 교육</b></span>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn-gold" href="#apply">
+            무료 상담 신청, 30초면 끝
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a class="btn-ghost" href="#quiz">🔍 나도 가능할까? 10초 테스트</a>
+        </div>
+
+        <div class="countdown">
+          <span><span id="cd-month"></span> 기수 마감까지</span>
+          <span class="time">
+            <span class="cell tabular"><span id="cd-d">00</span><small>일</small></span>
+            <span class="cell tabular"><span id="cd-h">00</span><small>시간</small></span>
+            <span class="cell tabular"><span id="cd-m">00</span><small>분</small></span>
+            <span class="cell tabular"><span id="cd-s">00</span><small>초</small></span>
+          </span>
+        </div>
+
+        <div class="hero-stats">
+          <div><div class="val tabular">70개</div><div class="lab">전국 지점·지사</div></div>
+          <div><div class="val tabular">928명</div><div class="lab">소속 설계사</div></div>
+          <div><div class="val tabular">33개</div><div class="lab">제휴 보험사</div></div>
+          <div><div class="val tabular">145%</div><div class="lab">연간 성장률</div></div>
+        </div>
+
+        <div class="trust-note">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+          금융감독원 등록 법인보험대리점(GA) · 상담은 100% 무료이며 입사 의무가 없습니다
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Social proof toast ===== -->
+  <div class="toast" id="toast">
+    <div class="t-ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+    <div><div class="t-name" id="toast-name"></div><div class="t-sub" id="toast-sub"></div></div>
+  </div>
+
+  <!-- ===== Pain points ===== -->
+  <section class="pain">
+    <div class="container">
+      <div class="sec-head reveal">
+        <p class="eyebrow" style="color: var(--brand-blue);">Check Point</p>
+        <h2 style="margin-top: 10px;">이 광고를 클릭하신 이유,<br />혹시 이것 때문 아닌가요?</h2>
+      </div>
+      <div class="pain-list">
+        <div class="pain-item reveal"><span class="chk">✓</span>월급날이 지나면 통장은 다시 '텅장', 10년 뒤에도 똑같을 것 같다</div>
+        <div class="pain-item reveal d1"><span class="chk">✓</span>회사에서 내 자리가 언제까지 있을지, 사실 자신이 없다</div>
+        <div class="pain-item reveal d2"><span class="chk">✓</span>더 벌고 싶은데, 방법을 몰라서 검색만 하고 있다</div>
+        <div class="pain-item reveal d3"><span class="chk">✓</span>지금 GA에서는 DB도 교육도 없이 '알아서 하라'고 한다</div>
+      </div>
+      <p class="pain-punch reveal">단 하나라도 해당된다면,<br /><span class="blue">이 페이지를 끝까지 내려보세요. 3분이면 충분합니다.</span></p>
+    </div>
+  </section>
+
+  <!-- ===== Compare table ===== -->
+  <section class="compare">
+    <div class="container">
+      <div class="sec-head reveal">
+        <p class="eyebrow" style="color: var(--brand-blue);">Before / After</p>
+        <h2 style="margin-top: 10px;">같은 하루 8시간,<br />완전히 다른 10년</h2>
+      </div>
+      <div class="cmp-wrap reveal">
+        <div class="cmp-row cmp-head">
+          <div class="c-label"></div>
+          <div class="c-old">지금의 직장</div>
+          <div class="c-new">메가미래라이프 설계사</div>
+        </div>
+        <div class="cmp-row"><div class="c-label">소득 상한</div><div class="c-old">연봉 테이블에 갇힘</div><div class="c-new">없음, 한 만큼 번다</div></div>
+        <div class="cmp-row"><div class="c-label">정년</div><div class="c-old">50대면 눈치</div><div class="c-new">없음, 내가 정한다</div></div>
+        <div class="cmp-row"><div class="c-label">승진</div><div class="c-old">연공서열 순번 대기</div><div class="c-new">성과만으로 팀장·지점장</div></div>
+        <div class="cmp-row"><div class="c-label">시간</div><div class="c-old">9 to 6 + 야근</div><div class="c-new">내 일정은 내가 설계</div></div>
+        <div class="cmp-row"><div class="c-label">그만두면</div><div class="c-old">남는 것 없음</div><div class="c-new">고객 자산이 계속 일한다</div></div>
+      </div>
+      <p class="cmp-foot reveal">선택이 바뀌면, <span class="blue">10년 뒤가 바뀝니다.</span></p>
+    </div>
+  </section>
+
+  <!-- ===== Income simulator ===== -->
+  <section class="sim" id="sim">
+    <div class="container">
+      <div class="sec-head reveal">
+        <p class="eyebrow" style="color: var(--brand-gold);">Income Simulator</p>
+        <h2 style="margin-top: 10px; color: #fff;">직접 밀어보세요.<br /><span style="color: var(--brand-gold-light);">당신의 가능성</span>입니다</h2>
+        <p class="desc">한 달에 몇 건 계약할 수 있을 것 같으세요? 슬라이더를 움직여 보세요.</p>
+      </div>
+      <div class="sim-card reveal">
+        <p class="sim-q">월 신규 계약 <span style="color: var(--brand-gold-light);" id="sim-n">5</span>건이라면?</p>
+        <input type="range" min="1" max="15" value="5" class="sim-slider" id="sim-slider" />
+        <div class="sim-scale"><span>1건</span><span>5건</span><span>10건</span><span>15건</span></div>
+        <div class="sim-result">
+          <div class="r-label">예상 월 활동 수수료</div>
+          <div class="r-value tabular">약 <span id="sim-val">400</span><small>만원</small></div>
+          <div class="sim-bar-wrap">
+            <div class="sim-bar-row"><span>나의 가능성</span><div class="sim-bar"><i class="b-me" id="bar-me" style="width: 47%;"></i></div></div>
+            <div class="sim-bar-row"><span>직장인 평균</span><div class="sim-bar"><i class="b-avg" style="width: 24%;"></i></div></div>
+          </div>
+          <p class="sim-vs">임금근로자 월평균 소득 <b>약 353만원</b>(통계청 기준)과 비교해 보세요</p>
+        </div>
+        <p class="sim-disclaimer">※ 위 금액은 건당 평균 초년도 수수료 약 80만원을 가정한 이해용 예시이며, 상품 구성·월납 보험료·회사 수수료 규정·활동량에 따라 달라집니다. 특정 소득을 보장하지 않습니다.</p>
+        <div class="sim-cta">
+          <a class="btn-gold" href="#apply" style="animation: none;">이 숫자, 현실로 만드는 법 듣기</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Benefits ===== -->
+  <section class="benefits">
+    <div class="container">
+      <div class="sec-head reveal">
+        <p class="eyebrow" style="color: var(--brand-blue);">Why Mega Mirae Life</p>
+        <h2 style="margin-top: 10px;">"맨땅에 헤딩"은<br />저희 사전에 없습니다</h2>
+        <p class="desc">혼자 뛰게 두지 않습니다. 정착할 때까지, 회사가 시스템으로 밀어드립니다.</p>
+      </div>
+      <div class="benefit-grid">
+        <div class="benefit-card reveal">
+          <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg></div>
+          <div>
+            <h3>지인 영업 강요 NO, <span class="hl">검증된 DB 지원</span></h3>
+            <p>"가족·친구한테 팔아라" 하지 않습니다. 상담을 원하는 검증된 고객 DB로 시작하니, 영업 자체에만 집중할 수 있습니다.</p>
+          </div>
+        </div>
+        <div class="benefit-card reveal d1">
+          <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+          <div>
+            <h3>보험 몰라도 OK, <span class="hl">매일 원수사 교육</span></h3>
+            <p>33개 원수사 상품 교육이 매일 진행됩니다. 자격시험 준비부터 실전 화법까지 신입 전담 커리큘럼으로, 무경력자도 전문가가 됩니다.</p>
+          </div>
+        </div>
+        <div class="benefit-card reveal d2">
+          <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/></svg></div>
+          <div>
+            <h3>일한 만큼 그대로, <span class="hl">업계 최고 수준 수수료</span></h3>
+            <p>33개 제휴 보험사의 폭넓은 상품군과 투명한 수수료 체계. 내 노력이 어디로 새는지 궁금해할 필요가 없습니다.</p>
+          </div>
+        </div>
+        <div class="benefit-card reveal d3">
+          <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 7h6v6"/><path d="m22 7-8.5 8.5-5-5L2 17"/></svg></div>
+          <div>
+            <h3>무경력 신입 <span class="hl">최대 1천만원 지원</span></h3>
+            <p>시작이 막막하지 않도록, 무경력 신입에게 최대 1천만원까지 정착을 지원합니다. 여기에 투명한 승격 기준으로 설계사에서 팀장, 지점장까지 커리어의 다음 장이 이어집니다. (지원 조건은 상담 시 안내)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AI section ===== -->
+  <section class="ai">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="ai-badge">🤖 AI SUPPORT · 업계 선도</span>
+        <h2>요즘 보험 영업,<br /><span style="color: var(--brand-blue);">AI 없이 하면 뒤처집니다</span></h2>
+        <p class="desc">메가미래라이프에는 AI 전문가가 상주합니다.<br />설계사님이 영업에만 집중하도록, AI가 나머지를 돕습니다.</p>
+      </div>
+      <div class="ai-grid">
+        <div class="ai-card reveal">
+          <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+          <h3>AI 교육 지원</h3>
+          <p>ChatGPT 등 최신 AI 도구를 고객 상담, 상품 설명, 마케팅에 바로 쓸 수 있도록 전담 전문가가 정기 교육을 진행합니다. 컴퓨터가 어려워도 따라올 수 있게 처음부터 가르쳐 드립니다.</p>
+        </div>
+        <div class="ai-card reveal d1">
+          <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+          <h3>AI 시스템 지원</h3>
+          <p>고객 관리부터 상담 준비까지, 반복 업무를 AI 기반 시스템이 대신합니다. 서류 작업에 쓰던 시간을 고객 만나는 시간으로 바꿔 드립니다.</p>
+        </div>
+        <div class="ai-card reveal d2">
+          <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 7h6v6"/><path d="m22 7-8.5 8.5-5-5L2 17"/></svg></div>
+          <h3>AI 실무 영업 방향성 교육</h3>
+          <p>AI 시대에 보험 영업이 어디로 가는지, 무엇을 준비해야 하는지. 트렌드를 실제 영업 전략으로 연결하는 실무 교육을 진행합니다. 준비된 설계사만 살아남는 시대입니다.</p>
+        </div>
+      </div>
+      <div class="ai-strip reveal">
+        <span><span class="gold">33개 보험사</span> 상품 판매</span>
+        <span class="sep"></span>
+        <span>매일 진행되는 <span class="gold">원수사 교육</span></span>
+        <span class="sep"></span>
+        <span><span class="gold">AI 전문가</span> 상주 지원</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Network map ===== -->
+  <section class="network">
+    <div class="container">
+      <div class="sec-head reveal">
+        <p class="eyebrow" style="color: var(--brand-gold);">Nationwide Network</p>
+        <h2 style="color: #fff;">전국 <span style="color: var(--brand-gold-light);">70개 지점</span>,<br />어디서든 함께합니다</h2>
+        <p class="desc">서울부터 부산까지, 928명의 설계사가 전국에서 활동 중입니다.</p>
+      </div>
+      <div class="net-wrap">
+        <div class="net-map reveal">
+          <svg viewBox="0 0 400 520" role="img" aria-label="메가미래라이프 전국 지점 지도">
+            <path class="land" d="M 88,66 L 118,48 L 152,38 L 178,52 L 205,44 L 232,36 L 252,58 L 268,88 L 282,120 L 296,158 L 306,196 L 312,232 L 330,258 L 334,276 L 322,300 L 312,330 L 308,352 L 296,372 L 276,384 L 252,378 L 232,390 L 208,382 L 186,394 L 162,386 L 140,398 L 118,390 L 98,378 L 92,352 L 100,330 L 86,308 L 96,286 L 82,262 L 92,238 L 80,214 L 92,192 L 82,168 L 94,144 L 84,120 L 94,94 Z" />
+            <ellipse class="land" cx="120" cy="470" rx="34" ry="15" />
+            <!-- city dots are injected by JS -->
+            <g id="map-cities"></g>
+          </svg>
+        </div>
+        <div class="net-side reveal d1">
+          <div class="net-totals">
+            <div class="net-total"><div class="v tabular"><span class="countup" data-end="70">0</span>개</div><div class="l">전국 지점·지사</div></div>
+            <div class="net-total"><div class="v tabular"><span class="countup" data-end="928">0</span>명</div><div class="l">소속 설계사</div></div>
+          </div>
+          <div class="net-list" id="net-list"></div>
+          <p class="net-note">2026. 7. 기준 · 지점 위치는 안내용 약도입니다</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Stories ===== -->
+  <section class="stories">
+    <div class="container">
+      <div class="sec-head reveal">
+        <p class="eyebrow" style="color: var(--brand-blue);">Real Story</p>
+        <h2 style="margin-top: 10px;">1년 전, 그들도<br />이 페이지를 보고 있었습니다</h2>
+      </div>
+      <div class="story-grid">
+        <div class="story-card reveal">
+          <div class="story-metric"><div class="m-big">입사 8개월,<br />전 직장 연봉 추월</div><div class="m-sub">사무직 10년 차에서 설계사 전향</div></div>
+          <div class="story-body">
+            <p class="quote">"솔직히 반신반의로 상담 신청했어요. 지금요? 제일 잘한 결정이라고 말합니다. 소득도 소득인데, 제 시간을 제가 설계한다는 게 가장 큽니다."</p>
+            <div class="who"><div class="avatar">김</div><div><div class="name">김 O O 설계사</div><div class="role">전 중소기업 사무직 · 입사 1년 차</div></div></div>
+          </div>
+        </div>
+        <div class="story-card reveal d1">
+          <div class="story-metric"><div class="m-big">경단 7년,<br />팀 에이스로 복귀</div><div class="m-sub">전업주부에서 2년 차 설계사로</div></div>
+          <div class="story-body">
+            <p class="quote">"아이 키우느라 경력이 끊겼는데, '처음부터 다 가르쳐드린다'는 말이 진짜였어요. 자격증부터 화법까지. 지금은 아이 하원 시간에 맞춰 일합니다."</p>
+            <div class="who"><div class="avatar">박</div><div><div class="name">박 O O 설계사</div><div class="role">경력 단절 후 재도전 · 입사 2년 차</div></div></div>
+          </div>
+        </div>
+        <div class="story-card reveal d2">
+          <div class="story-metric"><div class="m-big">이직 1년 만에<br />팀장 승격</div><div class="m-sub">타 GA 3년 차에서 팀장으로</div></div>
+          <div class="story-body">
+            <p class="quote">"전에 있던 GA는 DB가 없어서 지인 영업만 했어요. 여기 와서 DB 받고 뛰니까 완전히 다른 게임이더라고요. 승격 기준도 투명해서 목표가 생깁니다."</p>
+            <div class="who"><div class="avatar">이</div><div><div class="name">이 O O 팀장</div><div class="role">타 GA 경력 이직 · 현 팀장</div></div></div>
+          </div>
+        </div>
+      </div>
+      <p class="story-disclaimer">※ 소속 설계사 인터뷰를 재구성한 사례이며, 개인의 성과와 소득은 활동량과 역량에 따라 다를 수 있습니다.</p>
+    </div>
+  </section>
+
+  <!-- ===== Quiz ===== -->
+  <section class="quiz" id="quiz">
+    <div class="container">
+      <div class="sec-head reveal">
+        <p class="eyebrow" style="color: var(--brand-gold);">10-Second Test</p>
+        <h2 style="margin-top: 10px; color: #fff;">나도 할 수 있을까?<br /><span style="color: var(--brand-gold-light);">10초 적합도 테스트</span></h2>
+        <p class="desc">3개 질문에 답하면, 당신의 설계사 적합도를 알려드립니다.</p>
+      </div>
+      <div class="quiz-card reveal" id="quiz-card">
+        <div class="quiz-progress"><i class="on" id="qp-1"></i><i id="qp-2"></i><i id="qp-3"></i></div>
+        <div id="quiz-body"></div>
+        <p class="quiz-note">간단 참고용 테스트입니다 · 결과와 무관하게 상담은 무료입니다</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Process ===== -->
+  <section class="process">
+    <div class="container">
+      <div class="sec-head reveal">
+        <p class="eyebrow" style="color: var(--brand-blue);">How to Join</p>
+        <h2 style="margin-top: 10px;">시작은 <span style="color: var(--brand-blue);">30초</span>,<br />나머지는 저희가 함께합니다</h2>
+      </div>
+      <div class="process-grid">
+        <div class="process-step reveal"><span class="stepno">1</span><h3>상담 신청</h3><p>이름 + 연락처만. 딱 30초.</p></div>
+        <div class="process-step reveal d1"><span class="stepno">2</span><h3>1:1 맞춤 상담</h3><p>AI전략파트장이 직접 연락드려 조건과 방향을 투명하게 안내합니다.</p></div>
+        <div class="process-step reveal d2"><span class="stepno">3</span><h3>교육 · 자격 취득</h3><p>무경력자도 자격시험부터 실무까지 전담 코칭.</p></div>
+        <div class="process-step reveal d3"><span class="stepno">4</span><h3>위촉 · 활동 시작</h3><p>DB 지원과 함께 첫 활동. 정착까지 밀착 관리합니다.</p></div>
+      </div>
+      <p class="process-note reveal">상담 받는다고 입사해야 하는 것 아닙니다. 조건만 들어보고 결정하세요.</p>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq">
+    <div class="container">
+      <div class="sec-head reveal">
+        <p class="eyebrow" style="color: var(--brand-blue);">FAQ</p>
+        <h2 style="margin-top: 10px;">망설이는 분들이<br />가장 많이 묻는 질문</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button class="faq-q"><span><span class="q-mark">Q.</span>보험 영업, 한 번도 안 해봤는데 정말 가능한가요?</span><svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="faq-a"><div class="faq-a-inner">네. 소속 설계사의 상당수가 완전 무경력으로 시작했습니다. 자격시험 준비부터 상품 지식, 실전 화법까지 신입 전담 교육 과정이 준비되어 있고, 33개 원수사 상품 교육이 매일 진행됩니다. 정착 기간에는 선배 설계사와 매니저가 밀착 지원합니다.</div></div>
+        </div>
+        <div class="faq-item reveal d1">
+          <button class="faq-q"><span><span class="q-mark">Q.</span>지인들한테 보험 팔라고 시키는 것 아닌가요?</span><svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="faq-a"><div class="faq-a-inner">아니요. 지인 영업을 강요하지 않습니다. 상담을 원하는 검증된 고객 DB를 지원하기 때문에, 지인 리스트 없이도 영업 활동을 시작할 수 있습니다. 이 부분이 타사와 가장 다른 점입니다.</div></div>
+        </div>
+        <div class="faq-item reveal d2">
+          <button class="faq-q"><span><span class="q-mark">Q.</span>AI 교육은 컴퓨터를 잘 못해도 따라갈 수 있나요?</span><svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="faq-a"><div class="faq-a-inner">네. 스마트폰만 쓸 줄 알면 충분합니다. 상주 AI 전문가가 기초부터 실무 활용까지 단계별로 교육하며, 고객 상담 준비나 안내 자료 작성 같은 실제 업무에 바로 써먹는 것부터 시작합니다.</div></div>
+        </div>
+        <div class="faq-item reveal d3">
+          <button class="faq-q"><span><span class="q-mark">Q.</span>나이가 많은데(적은데) 괜찮을까요?</span><svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="faq-a"><div class="faq-a-inner">나이 제한 없습니다. 20대 초년생부터 인생 2막을 시작한 50대까지 활동 중입니다. 오히려 사회 경험과 인간관계가 자산이 되는 일이라, 연차가 있을수록 유리한 경우도 많습니다.</div></div>
+        </div>
+        <div class="faq-item reveal d4">
+          <button class="faq-q"><span><span class="q-mark">Q.</span>지금 다른 GA에 있는데, 옮기면 뭐가 달라지나요?</span><svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="faq-a"><div class="faq-a-inner">경력 설계사는 기존 실적과 경력을 고려한 맞춤 조건으로 모십니다. DB 지원 규모, 수수료 체계, 팀 구성까지 1:1 상담에서 숫자로 비교해 드립니다. 듣고 나서 결정하셔도 늦지 않습니다.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Apply form ===== -->
+  <section class="apply" id="apply">
+    <div class="container">
+      <div class="sec-head reveal">
+        <div class="slots-badge"><span>🔥</span><span id="strip-month2"></span> 잔여 상담 <b>&nbsp;<span id="form-slots">6</span>자리</b> (마감 시 다음 기수 이월)</div>
+        <h2 style="color: #fff;">지금 넘기면,<br /><span style="color: var(--brand-gold-light);">한 달 뒤에 또 검색</span>하고 있을 겁니다</h2>
+        <p class="desc">30초 신청, 근무 시간 기준 평균 1시간 내 연락 · 상담 무료 · 입사 의무 없음</p>
+        <div class="support-banner">💰 무경력 신입 <b>최대 1,000만원 지원</b> · 자세한 조건은 상담에서 확인하세요</div>
+      </div>
+
+      <div class="form-card reveal">
+        <form id="apply-form" novalidate>
+          <div class="form-group">
+            <label for="f-name">이름 <span class="req">*</span></label>
+            <input type="text" id="f-name" name="name" placeholder="이름을 입력해 주세요" required autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <label for="f-phone">연락처 <span class="req">*</span></label>
+            <input type="tel" id="f-phone" name="phone" placeholder="010-0000-0000" required autocomplete="tel" inputmode="numeric" />
+          </div>
+          <div class="form-group">
+            <label>보험 영업 경력 <span class="req">*</span></label>
+            <div class="radio-row">
+              <label class="radio-pill"><input type="radio" name="career" value="신입(경력 없음)" checked /><span>신입 (경력 없음)</span></label>
+              <label class="radio-pill"><input type="radio" name="career" value="경력(타 GA/보험사)" /><span>경력 (타 GA·보험사)</span></label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="f-age">연령대</label>
+            <select id="f-age" name="age">
+              <option value="">선택해 주세요 (선택사항)</option>
+              <option value="20대">20대</option>
+              <option value="30대">30대</option>
+              <option value="40대">40대</option>
+              <option value="50대">50대</option>
+              <option value="60대 이상">60대 이상</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="f-msg">문의 사항</label>
+            <textarea id="f-msg" name="message" rows="3" placeholder="궁금하신 점을 자유롭게 남겨주세요 (선택사항)"></textarea>
+          </div>
+          <div class="consent">
+            <input type="checkbox" id="f-consent" required />
+            <label for="f-consent"><b>[필수] 개인정보 수집·이용 동의</b><br />수집 항목: 이름, 연락처, 경력, 연령대 · 이용 목적: 입사 상담 및 채용 안내 · 보유 기간: 상담 완료 후 6개월 (동의 거부 시 상담 신청이 제한됩니다)</label>
+          </div>
+          <button type="submit" class="btn-submit" id="submit-btn">무료 상담 신청하고 조건 들어보기</button>
+          <p class="form-alt">전화가 편하시다면 AI전략파트장 직통 <a href="tel:01076019436">010-7601-9436</a></p>
+        </form>
+
+        <div class="form-success" id="form-success">
+          <div class="big-check"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <h3>신청 완료! 잘 선택하셨습니다</h3>
+          <p>AI전략파트장이 근무 시간 기준<br />평균 1시간 이내에 연락드립니다.<br /><br />더 빠른 상담을 원하시면 <a href="tel:01076019436" style="color: var(--brand-gold-light); font-weight:800;">010-7601-9436</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <div class="container">
+      <div class="fbrand"><span class="mark">M</span>MEGA MIRAE LIFE</div>
+      <p>
+        상호(법인명): 메가미래라이프 · 대표: 전형노 · 사업자등록번호: 504-85-37307<br />
+        메가(주) 대리점번호: 2005108004<br />
+        전국 70개 지점·지사 운영 · 리쿠르팅 문의(AI전략파트장) 010-7601-9436
+      </p>
+      <p style="margin-top: 10px;">
+        본 페이지는 보험설계사 위촉 모집을 위한 안내 페이지이며, 근로계약이 아닌 위촉계약 체결을 전제로 합니다.<br />
+        개인의 소득 및 성과는 활동량과 역량에 따라 달라질 수 있으며, 본 페이지의 수치 예시는 특정 소득을 보장하지 않습니다.<br />
+        신입 지원 제도의 지원 금액과 조건은 관련 규정 및 회사 기준에 따르며, 상세 내용은 상담 시 안내됩니다.
+      </p>
+      <p class="copy">© 2026 MEGA MIRAE LIFE. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ===== Sticky CTA ===== -->
+  <div class="sticky-cta">
+    <a class="s-call" href="tel:01076019436">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      전화
+    </a>
+    <a class="s-kakao" href="https://open.kakao.com/o/spNI7t6f" target="_blank" rel="noopener">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.48 3 2 6.48 2 10.8c0 2.76 1.86 5.18 4.64 6.56-.2.74-.74 2.7-.85 3.12-.13.52.19.51.4.37.17-.11 2.6-1.77 3.66-2.49.69.1 1.4.15 2.15.15 5.52 0 10-3.48 10-7.71S17.52 3 12 3z"/></svg>
+      카톡 문의
+    </a>
+    <button class="s-apply" onclick="document.getElementById('apply').scrollIntoView({behavior:'smooth'})">
+      🔥 무료 상담 신청
+    </button>
+  </div>
+
+  <script>
+    // ================= 설정 (여기만 바꾸면 됩니다) =================
+    var CONFIG = {
+      PHONE: "010-7601-9436",
+      KAKAO: "https://open.kakao.com/o/spNI7t6f",
+      SLOTS: 6,                       // 이번 달 잔여 상담 자릿수 (직접 관리)
+      SIM_PER_CONTRACT: 80,           // 시뮬레이터: 건당 평균 수수료 가정 (만원)
+      SIM_AVG_SALARY: 353,            // 비교 기준: 직장인 월평균 소득 (만원)
+      SUBMIT_URL: "",                 // Formspree / Google Apps Script URL (비우면 테스트 모드)
+      // 실시간 신청 알림. 실제 접수 데이터로 교체해서 사용하세요 (샘플 데이터)
+      TOASTS: [
+        { name: "김O진님 (대구)", sub: "신입 상담 신청 · 방금 전" },
+        { name: "이O훈님 (포항)", sub: "경력 이직 상담 신청 · 4분 전" },
+        { name: "박O영님 (서울)", sub: "적합도 테스트 완료 · 7분 전" },
+        { name: "최O빈님 (구미)", sub: "신입 상담 신청 · 12분 전" },
+        { name: "정O아님 (안산)", sub: "재취업 상담 신청 · 18분 전" },
+        { name: "한O수님 (부산)", sub: "경력 이직 상담 신청 · 25분 전" }
+      ],
+      // 전국 지점 현황 (2026. 7. 기준) x,y는 지도 좌표, anchor는 라벨 방향
+      BRANCHES: [
+        { name: "서울", x: 122, y: 104, branches: 3,  agents: 34,  anchor: "w" },
+        { name: "안산", x: 106, y: 138, branches: 1,  agents: 13,  anchor: "w" },
+        { name: "대전", x: 152, y: 234, branches: 1,  agents: 4,   anchor: "w" },
+        { name: "문경", x: 202, y: 206, branches: 1,  agents: 11,  anchor: "n" },
+        { name: "의성", x: 252, y: 234, branches: 1,  agents: 10,  anchor: "e" },
+        { name: "구미", x: 214, y: 256, branches: 4,  agents: 32,  anchor: "w" },
+        { name: "김천", x: 184, y: 282, branches: 2,  agents: 7,   anchor: "w" },
+        { name: "포항", x: 314, y: 260, branches: 9,  agents: 109, anchor: "e" },
+        { name: "대구", x: 250, y: 296, branches: 46, agents: 695, anchor: "s" },
+        { name: "경주", x: 300, y: 308, branches: 1,  agents: 9,   anchor: "e" },
+        { name: "부산", x: 292, y: 366, branches: 1,  agents: 4,   anchor: "e" }
+      ]
+    };
+    // ==============================================================
+
+    // ---- month labels / slots / countdown ----
+    (function () {
+      var now = new Date();
+      var m = (now.getMonth() + 1) + "월";
+      document.getElementById("strip-month").textContent = m;
+      document.getElementById("strip-month2").textContent = m;
+      document.getElementById("cd-month").textContent = m;
+      document.getElementById("strip-slots").textContent = CONFIG.SLOTS;
+      document.getElementById("form-slots").textContent = CONFIG.SLOTS;
+
+      var end = new Date(now.getFullYear(), now.getMonth() + 1, 1);
+      function pad(n) { return n < 10 ? "0" + n : "" + n; }
+      function tick() {
+        var diff = Math.max(0, end - new Date());
+        document.getElementById("cd-d").textContent = pad(Math.floor(diff / 86400000));
+        document.getElementById("cd-h").textContent = pad(Math.floor(diff / 3600000) % 24);
+        document.getElementById("cd-m").textContent = pad(Math.floor(diff / 60000) % 60);
+        document.getElementById("cd-s").textContent = pad(Math.floor(diff / 1000) % 60);
+      }
+      tick(); setInterval(tick, 1000);
+    })();
+
+    // ---- network map ----
+    (function () {
+      var svgNS = "http://www.w3.org/2000/svg";
+      var citiesG = document.getElementById("map-cities");
+      var list = document.getElementById("net-list");
+      var maxAgents = Math.max.apply(null, CONFIG.BRANCHES.map(function (b) { return b.agents; }));
+
+      CONFIG.BRANCHES.forEach(function (b, i) {
+        var r = 5 + Math.sqrt(b.branches) * 2.6;
+
+        var g = document.createElementNS(svgNS, "g");
+        g.setAttribute("class", "city");
+        g.dataset.i = i;
+
+        var ring = document.createElementNS(svgNS, "circle");
+        ring.setAttribute("class", "c-ring");
+        ring.setAttribute("cx", b.x); ring.setAttribute("cy", b.y); ring.setAttribute("r", r + 3);
+        g.appendChild(ring);
+
+        var dot = document.createElementNS(svgNS, "circle");
+        dot.setAttribute("class", "c-dot");
+        dot.setAttribute("cx", b.x); dot.setAttribute("cy", b.y); dot.setAttribute("r", r);
+        g.appendChild(dot);
+
+        var label = document.createElementNS(svgNS, "text");
+        var lx = b.x, ly = b.y + 4;
+        if (b.anchor === "w") { lx = b.x - r - 7; label.setAttribute("text-anchor", "end"); }
+        else if (b.anchor === "e") { lx = b.x + r + 7; label.setAttribute("text-anchor", "start"); }
+        else if (b.anchor === "n") { ly = b.y - r - 7; label.setAttribute("text-anchor", "middle"); }
+        else { ly = b.y + r + 15; label.setAttribute("text-anchor", "middle"); }
+        label.setAttribute("x", lx); label.setAttribute("y", ly);
+        label.textContent = b.name + " " + b.branches;
+        g.appendChild(label);
+
+        g.addEventListener("click", function () { setActive(i, true); });
+        citiesG.appendChild(g);
+
+        var row = document.createElement("button");
+        row.type = "button";
+        row.className = "net-row";
+        row.dataset.i = i;
+        row.innerHTML =
+          "<span>" + b.name + "</span>" +
+          '<span class="r-bar"><i data-w="' + Math.max(6, (b.agents / maxAgents) * 100) + '"></i></span>' +
+          '<span class="r-cnt tabular">' + b.branches + "지점 · " + b.agents + "명</span>";
+        row.addEventListener("mouseenter", function () { setActive(i, true); });
+        row.addEventListener("click", function () { setActive(i, true); });
+        list.appendChild(row);
+      });
+
+      var current = 0, paused = false, pauseTimer = null;
+      var cityEls = citiesG.querySelectorAll(".city");
+      var rowEls = list.querySelectorAll(".net-row");
+
+      function setActive(i, byUser) {
+        current = i;
+        cityEls.forEach(function (el) { el.classList.toggle("active", +el.dataset.i === i); });
+        rowEls.forEach(function (el) { el.classList.toggle("active", +el.dataset.i === i); });
+        if (byUser) {
+          paused = true;
+          clearTimeout(pauseTimer);
+          pauseTimer = setTimeout(function () { paused = false; }, 6000);
+        }
+      }
+
+      // 설계사 수 막대는 지도가 화면에 들어올 때 채워짐
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            list.querySelectorAll(".r-bar i").forEach(function (bar, bi) {
+              setTimeout(function () { bar.style.width = bar.dataset.w + "%"; }, bi * 80);
+            });
+            io.disconnect();
+          }
+        });
+      }, { threshold: 0.3 });
+      io.observe(list);
+
+      setActive(0, false);
+      setInterval(function () {
+        if (!paused) setActive((current + 1) % CONFIG.BRANCHES.length, false);
+      }, 2400);
+    })();
+
+    // ---- social proof toast ----
+    (function () {
+      var toast = document.getElementById("toast");
+      var i = 0;
+      function show() {
+        var t = CONFIG.TOASTS[i % CONFIG.TOASTS.length];
+        document.getElementById("toast-name").textContent = t.name;
+        document.getElementById("toast-sub").textContent = t.sub;
+        toast.classList.add("show");
+        setTimeout(function () { toast.classList.remove("show"); }, 4200);
+        i++;
+      }
+      setTimeout(show, 3500);
+      setInterval(show, 9000);
+    })();
+
+    // ---- scroll reveal ----
+    (function () {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add("on"); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.12 });
+      document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
+    })();
+
+    // ---- count up ----
+    (function () {
+      function animate(el) {
+        var end = parseInt(el.dataset.end, 10), dur = 1800, start = null;
+        function frame(t) {
+          if (!start) start = t;
+          var p = Math.min((t - start) / dur, 1);
+          el.textContent = Math.floor(end * (1 - Math.pow(1 - p, 3))).toLocaleString("ko-KR");
+          if (p < 1) requestAnimationFrame(frame);
+        }
+        requestAnimationFrame(frame);
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { animate(e.target); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.4 });
+      document.querySelectorAll(".countup").forEach(function (el) { io.observe(el); });
+    })();
+
+    // ---- income simulator ----
+    (function () {
+      var slider = document.getElementById("sim-slider");
+      var per = CONFIG.SIM_PER_CONTRACT, avg = CONFIG.SIM_AVG_SALARY;
+      var maxVal = 15 * per;
+      function update() {
+        var n = parseInt(slider.value, 10);
+        var val = n * per;
+        document.getElementById("sim-n").textContent = n;
+        document.getElementById("sim-val").textContent = val.toLocaleString("ko-KR");
+        document.getElementById("bar-me").style.width = Math.min(100, (val / maxVal) * 100) + "%";
+      }
+      document.querySelector(".b-avg").style.width = Math.min(100, (avg / maxVal) * 100) + "%";
+      slider.addEventListener("input", update);
+      update();
+    })();
+
+    // ---- quiz ----
+    (function () {
+      var questions = [
+        { q: "Q1. 지금 소득에 만족하시나요?", opts: ["전혀 만족 못 한다", "그럭저럭 버틴다", "만족하지만 더 벌고 싶다"] },
+        { q: "Q2. 사람 만나서 이야기하는 건 어떠세요?", opts: ["좋아하는 편이다", "보통이다", "낯은 가리지만 필요하면 한다"] },
+        { q: "Q3. 새로운 시작, 언제부터 가능하세요?", opts: ["당장이라도", "한 달 안에", "일단 알아보는 중"] }
+      ];
+      var answers = [];
+      var body = document.getElementById("quiz-body");
+
+      function renderQ(idx) {
+        for (var j = 1; j <= 3; j++) document.getElementById("qp-" + j).className = j <= idx + 1 ? "on" : "";
+        var html = '<p class="quiz-q">' + questions[idx].q + '</p><div class="quiz-opts">';
+        questions[idx].opts.forEach(function (o, oi) {
+          html += '<button type="button" class="quiz-opt" data-i="' + oi + '">' + o + "</button>";
+        });
+        html += "</div>";
+        body.innerHTML = html;
+        body.querySelectorAll(".quiz-opt").forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            answers.push(parseInt(btn.dataset.i, 10));
+            if (answers.length < questions.length) renderQ(answers.length);
+            else renderResult();
+          });
+        });
+      }
+
+      function renderResult() {
+        // 답변 조합에 따라 78~95% 사이 결정 (모두 긍정 프레임의 마케팅 퀴즈)
+        var score = 95 - (answers[0] === 2 ? 3 : 0) - answers[1] * 4 - answers[2] * 5;
+        var msgs = [
+          "지금의 갈증이 가장 큰 원동력입니다. <b>소득 구조를 바꿀 준비</b>가 되어 있는 상태예요.",
+          "대인 감각과 실행력의 균형이 좋습니다. <b>교육만 더해지면</b> 빠르게 정착하는 유형입니다.",
+          "신중한 성격은 설계사의 자산입니다. <b>고객 신뢰를 얻는 타입</b>이라 장기 성과가 좋습니다."
+        ];
+        body.innerHTML =
+          '<p class="quiz-result-title">당신의 설계사 적합도</p>' +
+          '<div class="quiz-result-pct tabular">' + score + '%</div>' +
+          '<p class="quiz-result-desc">' + msgs[answers[1]] + '<br />이 결과, 상담에서 구체적인 플랜으로 확인해 보세요.</p>' +
+          '<a class="btn-gold" href="#apply" style="animation:none; width:100%;">내 적합도로 맞춤 상담 받기</a>';
+        for (var j = 1; j <= 3; j++) document.getElementById("qp-" + j).className = "on";
+      }
+
+      renderQ(0);
+    })();
+
+    // ---- FAQ accordion ----
+    document.querySelectorAll(".faq-q").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var item = btn.parentElement;
+        var answer = item.querySelector(".faq-a");
+        var isOpen = item.classList.contains("open");
+        document.querySelectorAll(".faq-item.open").forEach(function (o) {
+          o.classList.remove("open");
+          o.querySelector(".faq-a").style.maxHeight = null;
+        });
+        if (!isOpen) { item.classList.add("open"); answer.style.maxHeight = answer.scrollHeight + "px"; }
+      });
+    });
+
+    // ---- phone auto-format ----
+    document.getElementById("f-phone").addEventListener("input", function (e) {
+      var v = e.target.value.replace(/\D/g, "").slice(0, 11);
+      if (v.length > 7) v = v.slice(0, 3) + "-" + v.slice(3, 7) + "-" + v.slice(7);
+      else if (v.length > 3) v = v.slice(0, 3) + "-" + v.slice(3);
+      e.target.value = v;
+    });
+
+    // ---- form submit ----
+    document.getElementById("apply-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      var name = document.getElementById("f-name").value.trim();
+      var phone = document.getElementById("f-phone").value.trim();
+      var consent = document.getElementById("f-consent").checked;
+
+      if (!name) { alert("이름을 입력해 주세요."); document.getElementById("f-name").focus(); return; }
+      if (!/^01[0-9]-\d{3,4}-\d{4}$/.test(phone)) { alert("연락처를 정확히 입력해 주세요.\n예) 010-1234-5678"); document.getElementById("f-phone").focus(); return; }
+      if (!consent) { alert("개인정보 수집·이용에 동의해 주세요."); return; }
+
+      var btn = document.getElementById("submit-btn");
+      btn.disabled = true;
+      btn.textContent = "접수 중...";
+
+      var data = {
+        name: name,
+        phone: phone,
+        career: document.querySelector('input[name="career"]:checked').value,
+        age: document.getElementById("f-age").value,
+        message: document.getElementById("f-msg").value.trim(),
+        submittedAt: new Date().toLocaleString("ko-KR"),
+        source: location.href
+      };
+
+      function done() {
+        document.getElementById("apply-form").style.display = "none";
+        document.getElementById("form-success").classList.add("show");
+      }
+
+      if (CONFIG.SUBMIT_URL) {
+        fetch(CONFIG.SUBMIT_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(data).toString()
+        }).then(done).catch(function () {
+          alert("일시적인 오류가 발생했습니다. 전화(" + CONFIG.PHONE + ")로 문의해 주세요.");
+          btn.disabled = false;
+          btn.textContent = "무료 상담 신청하고 조건 들어보기";
+        });
+      } else {
+        setTimeout(done, 600);
+      }
+    });
+  </script>
+</body>
+</html>
