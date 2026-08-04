@@ -1019,12 +1019,30 @@
             </select>
           </div>
           <div class="form-group">
+            <label for="f-region">희망 근무 지역 <span class="req">*</span></label>
+            <select id="f-region" name="region" required>
+              <option value="">선택해 주세요</option>
+              <option value="서울">서울</option>
+              <option value="경기(안산)">경기 (안산)</option>
+              <option value="대전">대전</option>
+              <option value="대구">대구</option>
+              <option value="포항">포항</option>
+              <option value="구미">구미</option>
+              <option value="김천">김천</option>
+              <option value="경주">경주</option>
+              <option value="문경">문경</option>
+              <option value="의성">의성</option>
+              <option value="부산">부산</option>
+              <option value="기타 지역">기타 지역</option>
+            </select>
+          </div>
+          <div class="form-group">
             <label for="f-msg">문의 사항</label>
             <textarea id="f-msg" name="message" rows="3" placeholder="궁금하신 점을 자유롭게 남겨주세요 (선택사항)"></textarea>
           </div>
           <div class="consent">
             <input type="checkbox" id="f-consent" required />
-            <label for="f-consent"><b>[필수] 개인정보 수집·이용 동의</b><br />수집 항목: 이름, 연락처, 경력, 연령대 · 이용 목적: 입사 상담 및 채용 안내 · 보유 기간: 상담 완료 후 6개월 (동의 거부 시 상담 신청이 제한됩니다)</label>
+            <label for="f-consent"><b>[필수] 개인정보 수집·이용 동의</b><br />수집 항목: 이름, 연락처, 경력, 연령대, 희망 근무 지역 · 이용 목적: 입사 상담 및 채용 안내 · 보유 기간: 상담 완료 후 6개월 (동의 거부 시 상담 신청이 제한됩니다)</label>
           </div>
           <button type="submit" class="btn-submit" id="submit-btn">무료 상담 신청하고 조건 들어보기</button>
           <p class="form-alt">전화가 편하시다면 AI전략파트장 직통 <a href="tel:01076019436">010-7601-9436</a></p>
@@ -1080,7 +1098,7 @@
       SLOTS: 6,                       // 이번 달 잔여 상담 자릿수 (직접 관리)
       SIM_PER_CONTRACT: 80,           // 시뮬레이터: 건당 평균 수수료 가정 (만원)
       SIM_AVG_SALARY: 353,            // 비교 기준: 직장인 월평균 소득 (만원)
-      SUBMIT_URL: "",                 // Formspree / Google Apps Script URL (비우면 테스트 모드)
+      SUBMIT_URL: "https://script.google.com/macros/s/AKfycbwUEShRHFIWF8PUo_BgEeMHvAjcInZwcIK36N_z12ZVTbXx7ColOubzi0S6O5vhhD6qkg/exec", // 구글 시트 접수 + Gmail 알림
       // 실시간 신청 알림. 실제 접수 데이터로 교체해서 사용하세요 (샘플 데이터)
       TOASTS: [
         { name: "김O진님 (대구)", sub: "신입 상담 신청 · 방금 전" },
@@ -1351,8 +1369,10 @@
       var phone = document.getElementById("f-phone").value.trim();
       var consent = document.getElementById("f-consent").checked;
 
+      var region = document.getElementById("f-region").value;
       if (!name) { alert("이름을 입력해 주세요."); document.getElementById("f-name").focus(); return; }
       if (!/^01[0-9]-\d{3,4}-\d{4}$/.test(phone)) { alert("연락처를 정확히 입력해 주세요.\n예) 010-1234-5678"); document.getElementById("f-phone").focus(); return; }
+      if (!region) { alert("희망 근무 지역을 선택해 주세요."); document.getElementById("f-region").focus(); return; }
       if (!consent) { alert("개인정보 수집·이용에 동의해 주세요."); return; }
 
       var btn = document.getElementById("submit-btn");
@@ -1364,6 +1384,7 @@
         phone: phone,
         career: document.querySelector('input[name="career"]:checked').value,
         age: document.getElementById("f-age").value,
+        region: region,
         message: document.getElementById("f-msg").value.trim(),
         submittedAt: new Date().toLocaleString("ko-KR"),
         source: location.href

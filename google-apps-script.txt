@@ -1,0 +1,72 @@
+// ============================================================
+// 메가미래라이프 상담 접수 스크립트 (Google Apps Script)
+// 기능: 랜딩페이지 폼 접수 → 시트에 자동 저장 + Gmail 알림 발송
+// ============================================================
+
+var SETTINGS = {
+  NOTIFY_EMAIL: "big0944@gmail.com",   // 알림 받을 이메일 (여러 명이면 쉼표로 구분)
+  SHEET_NAME: "상담신청"                // 데이터가 쌓일 시트 탭 이름
+};
+
+function doPost(e) {
+  var p = e.parameter;
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheet = ss.getSheetByName(SETTINGS.SHEET_NAME);
+
+  // 시트가 없으면 자동 생성 + 헤더 작성
+  if (!sheet) {
+    sheet = ss.insertSheet(SETTINGS.SHEET_NAME);
+    sheet.appendRow(["접수일시", "이름", "연락처", "경력", "연령대", "희망지역", "문의사항", "유입경로"]);
+    sheet.getRange(1, 1, 1, 8).setFontWeight("bold").setBackground("#0f1e3d").setFontColor("#ffffff");
+    sheet.setFrozenRows(1);
+  }
+
+  var now = Utilities.formatDate(new Date(), "Asia/Seoul", "yyyy-MM-dd HH:mm:ss");
+
+  // 시트에 저장
+  sheet.appendRow([
+    now,
+    p.name || "",
+    p.phone || "",
+    p.career || "",
+    p.age || "",
+    p.region || "",
+    p.message || "",
+    p.source || ""
+  ]);
+
+  // Gmail 알림 발송
+  MailApp.sendEmail({
+    to: SETTINGS.NOTIFY_EMAIL,
+    subject: "🔥 [메가미래라이프] 새 상담 신청! " + (p.name || "이름없음") + " / " + (p.phone || ""),
+    body:
+      "새로운 입사 상담 신청이 접수되었습니다.\n\n" +
+      "■ 접수일시: " + now + "\n" +
+      "■ 이름: " + (p.name || "") + "\n" +
+      "■ 연락처: " + (p.phone || "") + "\n" +
+      "■ 경력: " + (p.career || "") + "\n" +
+      "■ 연령대: " + (p.age || "미선택") + "\n" +
+      "■ 희망지역: " + (p.region || "미선택") + "\n" +
+      "■ 문의사항: " + (p.message || "없음") + "\n\n" +
+      "빠른 연락이 계약률을 높입니다. 지금 바로 전화해 보세요!\n" +
+      "접수 명단 보기: " + ss.getUrl()
+  });
+
+  return ContentService.createTextOutput(JSON.stringify({ ok: true }))
+    .setMimeType(ContentService.MimeType.JSON);
+}
+
+// 테스트용 함수: 실행하면 시트 기록과 메일 발송을 시험해볼 수 있습니다
+function testSubmit() {
+  doPost({
+    parameter: {
+      name: "테스트",
+      phone: "010-0000-0000",
+      career: "신입(경력 없음)",
+      age: "30대",
+      region: "대구",
+      message: "테스트 접수입니다",
+      source: "테스트"
+    }
+  });
+}
