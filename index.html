@@ -106,6 +106,17 @@
     .hero .inner { position: relative; z-index: 2; text-align: left; max-width: 760px; }
     @media (max-width: 640px) { .hero { padding-top: 118px; } }
 
+    .hero .mega-line {
+      display: inline-block;
+      padding: 9px 15px; border-radius: 10px;
+      background: rgba(255,255,255,.055); border: 1px solid rgba(255,255,255,.14);
+      color: rgba(255,255,255,.8); font-size: 13.5px; font-weight: 600;
+      line-height: 1.5; word-break: keep-all;
+      margin-bottom: 14px;
+    }
+    .hero .mega-line b { color: #fff; font-weight: 800; }
+    .hero .mega-line .num { color: var(--brand-gold-light); font-weight: 800; }
+
     .hero .hook-label {
       display: inline-flex; align-items: center; gap: 8px;
       padding: 8px 16px; border-radius: 999px;
@@ -387,6 +398,21 @@
     .net-row.active .r-cnt { color: var(--brand-gold-light); }
     .net-note { margin-top: 16px; color: var(--slate-500); font-size: 11.5px; text-align: center; }
 
+    .branch-cta {
+      margin-top: 46px; padding: 30px 34px; border-radius: 18px;
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px;
+      background: linear-gradient(115deg, rgba(245,158,11,.16), rgba(245,158,11,.05) 70%);
+      border: 1px solid rgba(245,158,11,.38);
+      position: relative; z-index: 1;
+    }
+    .branch-cta .txt { max-width: 640px; }
+    .branch-cta .txt .tag { display: inline-block; color: var(--brand-gold-light); font-weight: 800; font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 10px; }
+    .branch-cta .txt h3 { color: #fff; font-size: clamp(1.2rem, 3.4vw, 1.55rem); font-weight: 900; line-height: 1.35; margin-bottom: 10px; }
+    .branch-cta .txt h3 .gold { color: var(--brand-gold-light); }
+    .branch-cta .txt p { color: var(--slate-400); font-size: 14.5px; line-height: 1.7; }
+    .branch-cta .txt p b { color: #fff; }
+    @media (max-width: 640px) { .branch-cta { padding: 24px 20px; } }
+
     /* ---------- stories ---------- */
     .stories { background: #fff; }
     .story-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
@@ -580,6 +606,7 @@
       .topbar .call { padding: 7px 12px; font-size: 12.5px; }
       .hero { padding-bottom: 56px; }
       .hero .bg { animation: none; } /* 모바일 배터리·성능 절약 */
+      .hero .mega-line { font-size: 12px; padding: 8px 12px; margin-bottom: 12px; }
       .hero .hook-label { font-size: 12.5px; padding: 7px 13px; margin-bottom: 18px; }
       .hero .sub { margin: 16px 0 12px; }
       .hero-keywords { gap: 6px; margin-bottom: 24px; }
@@ -646,6 +673,8 @@
     <div class="veil" aria-hidden="true"></div>
     <div class="container">
       <div class="inner">
+        <div class="mega-line">2005년 설립, 설계사 <span class="num">6,557명</span>의 초대형 연합GA <b>메가(주)</b>. 그 15개 사업단 중 하나가 <b>메가미래라이프</b>입니다.</div>
+
         <div class="hook-label"><span class="dot"></span>광고 보고 오셨나요? 딱 3분만 투자해 보세요</div>
 
         <h1>
@@ -666,6 +695,7 @@
           <span class="kw">✅ 검증된 <b>DB 지원</b></span>
           <span class="kw">✅ <b>AI 영업 지원</b> 시스템</span>
           <span class="kw">✅ 매일 <b>원수사 교육</b></span>
+          <span class="kw">🏢 전국 <b>지사·지점 개설</b> 가능</span>
         </div>
 
         <div class="cta-row">
@@ -878,6 +908,17 @@
           <p class="net-note">2026. 7. 기준 · 지점 위치는 안내용 약도입니다</p>
         </div>
       </div>
+
+      <div class="branch-cta reveal">
+        <div class="txt">
+          <span class="tag">Branch Open</span>
+          <h3>설계사만 모집하는 게 아닙니다.<br />전국 <span class="gold">지사·지점 개설</span>도 가능합니다</h3>
+          <p>조직을 이끌고 계신가요? 전국 어디든 개설할 수 있습니다.<br /><b>업계 최고 수준의 수수료</b>와 <b>개설·정착 지원 시스템</b>으로 시작부터 안착까지 함께합니다.</p>
+        </div>
+        <a class="btn-gold" href="#apply">지사·지점 개설 조건 문의
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -1005,6 +1046,7 @@
             <div class="radio-row">
               <label class="radio-pill"><input type="radio" name="career" value="신입(경력 없음)" checked /><span>신입 (경력 없음)</span></label>
               <label class="radio-pill"><input type="radio" name="career" value="경력(타 GA/보험사)" /><span>경력 (타 GA·보험사)</span></label>
+              <label class="radio-pill"><input type="radio" name="career" value="지사·지점 개설 문의" /><span>지사·지점 개설 문의</span></label>
             </div>
           </div>
           <div class="form-group">
